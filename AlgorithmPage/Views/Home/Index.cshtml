@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<script src="~/Scripts/Methods.js">
+
+</script>
+
+<div class="jumbotron">
+    <h1 class="top-heading-text">Let's Test Out Our Algorithms!</h1>
+    <p class="top-heading-subtext">Below you'll find my methods created to solve a variety of coding challenges in C#.</p>
+</div>
+
+<!--ROW 1-->
+<div class="row row-one">
+    <div class="col-md-4 col-one">
+        <h2>Greatest common divisor challenge.</h2>
+        <p class="p-gcd-method">
+            Write a function that returns the greatest common divisor of two numbers. 
+        </p>
+        <!--BEGIN FORM COL1-->
+        <form class="form-col-one">
+            <div class="form-group">
+                <label for="gcd-label-one">Enter # 1:</label>
+                <input type="number" id="gcd-number-one" class="form-control gcd-form-control-one" />
+            </div>
+
+            <div class="form-group">
+                <label for="gcd-label-two">Enter # 2:</label>
+                <input type="number" id="gcd-number-two" class="form-control gcd-form-control-two" />
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-col-one" onclick="GCDMethod()">Submit Answers</button>
+            <!--having first "btn" in front of btn-danger gives the rounded corners/additional boilerplate formatting-->
+
+
+        </form>
+    </div>
+
+
+
+
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-danger" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-danger" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>
+</div>
