@@ -2,9 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
-<script src="~/Scripts/Methods.js">
-
-</script>
+<script src="~/Scripts/Methods.js"></script>
 
 <div class="jumbotron">
     <h1 class="top-heading-text">Let's Test Out Our Algorithms!</h1>
@@ -32,22 +30,41 @@
 
             <button type="submit" class="btn btn-danger btn-col-one" onclick="GCDMethod()">Submit Answers</button>
             <!--having first "btn" in front of btn-danger gives the rounded corners/additional boilerplate formatting-->
-
-
         </form>
     </div>
 
+    <!--COL 2 (ROW 1)-->
+    <div class="col-md-4 col-two">
+        <h2>Number Masking Method</h2>
+        <p class="p-maskify-method">
+            Write a function that obscures all but the final four digits of user input as #'s if there are more than 4 digits. (Like a credit card).    
+        </p>
+        <!--BEGIN FORM COL2-->
+        <form class="form-col-two">
+            <div class="form-group">
+                <label for="maskify-label">Enter a series of digits to obscure.</label>
+                <input type="number" id="maskify-input" class="form-control maskify-form-control" />
+            </div>
 
-
-
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-danger" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+            <button type="submit" class="btn btn-danger btn-col-two" onclick="MaskifyMethod()">Submit</button>
+        </form>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-danger" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    
+    <!--COL 3 (ROW 1)-->
+    <div class="col-md-4 col-three">
+        <h2>Palindrome Method</h2>
+        <p class="p-palindrome-method">
+            Write a function that tells you if the user input is a palindrome.
+        </p>
+        <!--BEGIN FORM COL3-->
+        <form class="form-col-three">
+            <div class="form-group">
+                <label for="palindrome-label">Enter a sequence of characters.</label>
+                <input type="text" id="palindrome-input" class="form-control palindrome-form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-col-three" onclick="PalindromeMethod()">Submit</button>
+        </form>
     </div>
 </div>
+<!--END ROW 1-->

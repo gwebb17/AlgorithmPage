@@ -28,12 +28,68 @@
     }
 
     var result = finalResult27[finalResult27.length - 1];
-    alert(result);
-
-    
+    alert(result);  
 }
 
-function testMethod() {
-    var x = 10;
-    alert(x);
+function MaskifyMethod() {
+    let answer25 = document.getElementById("maskify-input").value;
+    var resultString25 = [];
+
+    //placing an alert message in each if statement specifies them so we don't get a second alert if final if statement is triggered.
+
+    if (answer25.length > 4) {
+
+        for (let h = 0; h < answer25.length; h++) {
+            resultString25.push(answer25[h]);
+        }
+            for (let i = 0; i < resultString25.length - 4; i++) {
+                resultString25[i] = "#";
+        }
+
+        result = resultString25.join(""); // .join("") removes the commas from array for visual aesthetics
+        alert(result); 
+
+    } else if (answer25.length > 0 && answer25.length <= 4) {
+        resultString25.push(answer25);
+        alert(resultString25);
+    } else if (answer25.length == 0) {
+        alert("Please enter a valid input.");
+    }
+}
+
+function PalindromeMethod() {
+    let answer24 = document.getElementById("palindrome-input").value;
+    var tempArrayA = [];
+    var tempArrayB = [];
+
+    for (let i = 0; i < answer24.length; i++) {
+        tempArrayA.push(answer24[i]);
+    }
+
+    for (let j = tempArrayA.length - 1; j > 0; j--) {
+        tempArrayB.push(tempArrayA[j]);
+    }
+    tempArrayB.push(tempArrayA[0]); //loop doesn't include tempArray[0] so add manually after it's run
+
+    
+    for (let h = 0; h < tempArrayA.length; h++) {
+        var ifPalindrome = false;
+        if (tempArrayA[h] == tempArrayB[h]) {
+            ifPalindrome = true;
+        } else if (tempArrayA[h] !== tempArrayB[h]) {
+            ifPalindrome = false;
+            break; //without a break statement the final value of ifPalindrome could still = true and throw off result
+            //since any false value causes it to not be a palindrome we can simply break anytime that occurs
+        }
+    }
+    //need a flag (ifPalindrome) to be reset which each iteration of h. .includes() doesn't function the way .contains() does in C#
+    //in this logic. Since each index of both arrays must be identical to be palindrome, continuously resetting flag for each element
+    //will work since tempArrayB has been reversed. Final value of ifPalindrome will be true if it is indeed a palindrome.
+    //Tried using "if tempArrayA == tempArrayB" and different equality operators as well as .includes() but doesn't work.
+
+    if (ifPalindrome) { //if flag has left above loop with a true value.
+        alert("This is a palindrome");
+    } else {
+        alert("This is not a palindrome");
+    }
 }
