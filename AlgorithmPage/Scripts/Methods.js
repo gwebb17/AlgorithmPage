@@ -115,3 +115,5 @@ function CollatzMethod() {
         alert("Please enter a number greater than 0.")
     }
 }
+//It seems that if we place the first alert inside our if statements, the method no longer works. The method also seems to break if we place our
+//final if statement inside the while loop. Need to identify why this occurs but everything else seems to work properly.
