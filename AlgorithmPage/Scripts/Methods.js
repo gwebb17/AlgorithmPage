@@ -109,11 +109,12 @@ function CollatzMethod() {
             break;
         }
     }
-    alert("It takes " + counter19 + " step(s) for N to = 1.");
+    if (answer19 == 1) {
+        alert("It takes " + counter19 + " step(s) for N to = 1.");
+    }
 
     if (answer19 == 0) {
         alert("Please enter a number greater than 0.")
     }
 }
-//It seems that if we place the first alert inside our if statements, the method no longer works. The method also seems to break if we place our
-//final if statement inside the while loop. Need to identify why this occurs but everything else seems to work properly.
+
