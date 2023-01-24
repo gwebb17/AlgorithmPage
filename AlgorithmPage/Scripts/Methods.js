@@ -84,12 +84,34 @@ function PalindromeMethod() {
     }
     //need a flag (ifPalindrome) to be reset which each iteration of h. .includes() doesn't function the way .contains() does in C#
     //in this logic. Since each index of both arrays must be identical to be palindrome, continuously resetting flag for each element
-    //will work since tempArrayB has been reversed. Final value of ifPalindrome will be true if it is indeed a palindrome.
+    //will work since tempArrayB has been reversed. 
     //Tried using "if tempArrayA == tempArrayB" and different equality operators as well as .includes() but doesn't work.
 
     if (ifPalindrome) { //if flag has left above loop with a true value.
         alert("This is a palindrome");
     } else {
         alert("This is not a palindrome");
+    }
+}
+
+function CollatzMethod() {
+    let answer19 = document.getElementById("collatz-input").value;
+    let counter19 = 0;
+
+    while (answer19 > 1) {
+        if (answer19 % 2 == 0) {
+            answer19 /= 2;
+            counter19++;
+        } else if (answer19 % 2 != 0) {
+            answer19 = answer19 * 3 + 1;
+            counter19++;
+        } else if (answer19 == 1) {
+            break;
+        }
+    }
+    alert("It takes " + counter19 + " step(s) for N to = 1.");
+
+    if (answer19 == 0) {
+        alert("Please enter a number greater than 0.")
     }
 }

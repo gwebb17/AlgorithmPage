@@ -68,3 +68,25 @@
     </div>
 </div>
 <!--END ROW 1-->
+
+<!--BEGIN ROW 2-->
+<div class="row row-two">
+    <div class="col-md-4 col-four">
+        <h2>
+            The Collatz Conjecture. 
+        </h2>
+        <p class="p-collatz-method">
+            Given a number N, if N is even perform N/2. Then if N is odd perform N * 3 + 1. Return the amount of steps it takes
+            for N to = 1.
+        </p>
+        <!--BEGIN FORM COL4-->
+        <form class="form-col-four">
+            <div class="form-group">
+                <label for="collatz-label">Enter a number greater than 0: </label>
+                <input type="number" id="collatz-input" class="form-control collatz-form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-col-four" onclick="CollatzMethod()">Submit</button>
+        </form>
+    </div>
+</div>
