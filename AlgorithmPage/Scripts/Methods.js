@@ -118,3 +118,33 @@ function CollatzMethod() {
     }
 }
 
+//Could be further refined by turning our result array into a string to be displayed at end
+//https://www.rapidtables.com/convert/number/decimal-to-binary.html for details on how the math works to convert
+function BinaryMethod() {
+    let temp = document.getElementById("binary-input").value;
+    let result = [];
+
+    while (temp > 0) {
+        console.log(temp); //can be removed, just to see process of operations during conversion in console
+        if (temp % 2 === 1) {
+            result.push(1);
+            temp = Math.floor(temp / 2);
+        } else if (temp % 2 === 0) {
+            result.push(0);
+            temp = Math.floor(temp / 2);
+        }
+    }
+    result.reverse(); //since we push each step of the process from right to left (1's, 2's, 4's etc) we need to reverse result to 
+    //go from left to right for final result
+
+    if (temp < 0) {
+        alert("Please enter a whole number.");
+    } else {
+        alert(result);
+    }
+}
+
+function MatchstickHouses() {
+
+}
+
