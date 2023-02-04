@@ -144,7 +144,18 @@ function BinaryMethod() {
     }
 }
 
-function MatchstickHouses() {
+function TwoDigitMultipleMethod() {
+    let temp = document.getElementById("two-digit-multiple-input").value;
+    let result = 0;
 
+    //initialize myArray as a num array filled with the contents of user input
+    var myArray = String(temp).split("").map((temp) => {
+        return Number(temp);
+    })
+
+    for (let i = 1; i < myArray[1] + 1; i++) {
+        result = myArray[0] * i;
+        alert(myArray[0] + " * " + i + " = " + result);
+    }
 }
 
