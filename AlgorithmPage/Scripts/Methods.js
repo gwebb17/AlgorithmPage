@@ -159,3 +159,22 @@ function TwoDigitMultipleMethod() {
     }
 }
 
+function TetrahedralMethod() {
+    let input = document.getElementById("tetrahedral-method-input").value;
+    let inputNum = parseFloat(input);
+    //formula is (n * (n + 1) * (n + 2)) / 6
+    //was getting input as a string for some reason hence the parseFloat to ensure its a number
+
+    if (inputNum >= 1 && inputNum % 1 == 0) {
+        let firstStep = inputNum + 1;
+        let secondStep = inputNum * firstStep;
+        let thirdStep = inputNum + 2;
+        let fourthStep = secondStep * thirdStep;
+        let result = fourthStep / 6;
+        alert("The nth tetrahedral number is " + result);
+        /*(n * (n + 1) * (n + 2)) / 6*/
+    } else if (inputNum - 1 || inputNum % 1 != 0) {
+        alert("That is not a tetrahedral number");
+    }
+}
+

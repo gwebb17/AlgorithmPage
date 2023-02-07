@@ -29,7 +29,7 @@
                 <input type="number" id="gcd-number-two" class="form-control gcd-form-control-two" />
             </div>
 
-            <button type="submit" class="btn btn-danger btn-col-one" onclick="GCDMethod()">Submit Answers</button>
+            <button type="submit" class="btn btn-danger btn-col-one" onclick="GCDMethod()">Submit</button>
             <!--having first "btn" in front of btn-danger gives the rounded corners/additional boilerplate formatting-->
         </form>
     </div>
@@ -114,7 +114,7 @@
         <h2>
             Two Digit Multiple Method.
         </h2>
-        <p class="two-digit-multiple-method">
+        <p class="p-two-digit-multiple-method">
             Enter a two digit number. Multiply the first digit by 1 and then increment by 1 until it matches the second digit. I.E. given
             35: 3 * 1 = 3, 3 * 2 = 6, 3 * 3 = 9, 3 * 4 = 12, 3 * 5 (target value of second digit) = 15.
         </p>
@@ -129,4 +129,28 @@
         </form>
     </div>
     <!--END COL6-->
+</div>
+<!--END ROW 2-->
+
+<!--BEGIN ROW 3-->
+<div class="row row-three">
+    <!--BEGIN COL 7-->
+    <div class="col-md-4 col-seven">
+        <h2>
+            Tetrahedral Method.
+        </h2>
+        <p class="p-tetrahedral-method">
+            Given a number n, return the nth tetrahedral number.
+        </p>
+        <!--BEGIN FORM COL 7-->
+        <form class="form-col-seven">
+            <div class="form-group">
+                <label for="tetrahedral-method">Enter a whole positive number: </label>
+                <input type="number" id="tetrahedral-method-input" class="form-control tetrahedral-method-form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-col-seven" onclick="TetrahedralMethod()">Submit</button>
+        </form>
+    </div>
+    <!--END COL 7-->
 </div>
