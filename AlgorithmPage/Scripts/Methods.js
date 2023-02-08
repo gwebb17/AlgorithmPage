@@ -178,3 +178,18 @@ function TetrahedralMethod() {
     }
 }
 
+//CIRCLE CALCULATIONS METHODS
+function CircleCalculationsGetArea() {
+    let areaInput = document.getElementById("circle-calculations-area-method-input").value;
+    let result = areaInput * areaInput * Math.PI;
+    alert("The calculated area is: " + result);
+
+}
+function CircleCalculationsGetPerimeter() {
+    let perimeterInput = document.getElementById("circle-calculations-method-perimeter-input").value;
+    let result = 2 * Math.PI * perimeterInput;
+
+    alert("The calculated perimeter is: " + result);
+}
+
+
