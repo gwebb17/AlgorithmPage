@@ -192,4 +192,61 @@ function CircleCalculationsGetPerimeter() {
     alert("The calculated perimeter is: " + result);
 }
 
+function TriangularMethod() {
+    let input = document.getElementById("triangular-method-input").value;
+    let inputNum = parseFloat(input); //otherwise input gets interpreted as a string incorrectly concatenates.
+    let result = inputNum * (inputNum + 1);
+    result /= 2;
+    alert(result);
+}
 
+function ConvenienceStoreMethod() {
+    let inputQuarters = document.getElementById("convenience-store-method-input-one").value;
+    let inputDimes = document.getElementById("convenience-store-method-input-two").value;
+    let inputNickels = document.getElementById("convenience-store-method-input-three").value;
+    let inputPennies = document.getElementById("convenience-store-method-input-four").value;
+    let inputTotal = document.getElementById("convenience-store-method-input-five").value;
+
+    let convertedQuarters = inputQuarters * .25;
+    let convertedDimes = inputDimes * .10;
+    let convertedNickels = inputNickels * .05;
+    let convertedPennies = inputPennies * .01;
+
+    let totalChange = convertedQuarters + convertedDimes + convertedNickels + convertedPennies;
+    let result = true;
+
+    totalChange >= inputTotal ? result = true : result = false;
+
+    if (result) {
+        alert("You have enough.");
+    } else {
+        alert("You don't have enough.");
+    }
+}
+
+function TwoSumMethod() {
+    let inputs = document.getElementById("two-sum-method-input-one").value;
+    let targetString = document.getElementById("two-sum-method-input-two").value;
+    let target = Number(targetString); //ensure target is a number not a string
+    var inputArray = String(inputs).split(",").map((inputs) => { //make number array separated by each , in inputs
+        return Number(inputs);
+    })
+    let mapResult = new Map();
+
+    let result = [];
+
+    for (let i = 0; i < inputArray.length; i++) {
+        let difference = target - inputArray[i];
+
+        if (mapResult.has(difference)) {
+            /*alert([i, mapResult.get(difference)]);*/
+            result.push(mapResult.get(difference));
+            result.push(i);
+            
+        }
+        mapResult.set(inputArray[i], i);
+               
+    }
+    alert(result);
+    
+}
