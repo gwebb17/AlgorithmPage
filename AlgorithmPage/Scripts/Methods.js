@@ -247,6 +247,17 @@ function TwoSumMethod() {
         mapResult.set(inputArray[i], i);
                
     }
+    alert(result);    
+}
+
+function LastWordMethod() {
+    let input = document.getElementById("last-word-method-input").value;
+
+    var sentenceArray = String(input).trim().split(" ").map((input) => { //place each word in a string array, also using trim to remove any spaces from end
+        return String(input);
+    })
+
+    let lastWord = sentenceArray.pop(); //now retrieve final word and store in var
+    let result = lastWord.length; //get length of final word
     alert(result);
-    
 }
