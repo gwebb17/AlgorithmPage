@@ -261,3 +261,18 @@ function LastWordMethod() {
     let result = lastWord.length; //get length of final word
     alert(result);
 }
+
+function PlusOneMethod() {
+    let input = document.getElementById("plus-one-method-input").value;
+    var inputArray = String(input).split("").map((input) => { //make input into an array 
+        return Number(input);
+    })
+    let numInteger = Number(input); //cast input into number
+    let resultInteger = numInteger + 1; //add 1 to number input
+
+    var resultArray = String(resultInteger).split("").map((resultInteger) => { //cast number reuslt back into number array
+        return Number(resultInteger);
+    })
+
+    alert(resultArray);
+}
