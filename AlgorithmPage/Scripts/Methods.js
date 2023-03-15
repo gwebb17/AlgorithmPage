@@ -264,9 +264,6 @@ function LastWordMethod() {
 
 function PlusOneMethod() {
     let input = document.getElementById("plus-one-method-input").value;
-    var inputArray = String(input).split("").map((input) => { //make input into an array 
-        return Number(input);
-    })
     let numInteger = Number(input); //cast input into number
     let resultInteger = numInteger + 1; //add 1 to number input
 
@@ -275,4 +272,30 @@ function PlusOneMethod() {
     })
 
     alert(resultArray);
+}
+
+function RomanNumeralsMethod() {
+    let input = document.getElementById("roman-numerals-method-input").value;
+
+    var romNum = {
+        "I": 1,
+        "V": 5,
+        "X": 10,
+        "L": 50,
+        "C": 100,
+        "D": 500,
+        "M": 1000
+    };
+
+    let result = 0;
+
+    for (let i = 0; i < input.length; i++) {
+        if (romNum[input[i]] < romNum[input[i + 1]]) {
+            result += romNum[input[i + 1]] - romNum[input[i]];
+            i++;
+        } else {
+            result += romNum[input[i]];
+        }
+    }
+    alert("The number equivalent is: " + result);
 }
